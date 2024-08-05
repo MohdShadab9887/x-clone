@@ -20,6 +20,7 @@ import crown from "../public/svg/tate'sCrown.jpg";
 import andrewDP from "../public/svg/ADREW,s DP.jpg";
 import harryDP from "../public/svg/CodeWithHarryDP.png";
 import hcDP from "../public/svg/ChaiOrCodeDP.jpg";
+import dotes from "../public/svg/N-Dots.svg";
 
 function App() {
   const [startup, setStartup] = useState(true);
@@ -40,11 +41,7 @@ function App() {
           <div
             className={` flex justify-center items-center bg-black h-full w-full absolute  z-10`}
           >
-            <img
-              className="invert absolute h-[90px]"
-              src={Xlogo}
-              alt=""
-            />
+            <img className="invert absolute h-[90px]" src={Xlogo} alt="" />
           </div>
         )}
 
@@ -172,7 +169,7 @@ function App() {
             <div>
               <img
                 className=" vs:hidden sm:hidden lg:flex mr-1"
-                src="./public/svg/N-Dots.svg"
+                src={dotes}
                 alt=""
               />
             </div>
@@ -295,7 +292,7 @@ function App() {
               </div>
 
               <div className="w-[8%]">
-                <img className="invert" src="public/svg/N-Dots.svg" alt="" />
+                <img className="invert" src={dotes} alt="" />
               </div>
             </div>
             <div className="flex m-auto mt-6 rounded-2xl overflow-hidden w-[80%]">
@@ -372,7 +369,7 @@ function App() {
               </div>
 
               <div className="w-[8%]">
-                <img className="invert" src="public/svg/N-Dots.svg" alt="" />
+                <img className="invert" src={dotes} alt="" />
               </div>
             </div>
             <div className="flex m-auto mt-6 rounded-2xl overflow-hidden w-[80%]">
@@ -468,7 +465,7 @@ function App() {
                 </div>
                 <img
                   className="invert pl-2 cursor-pointer"
-                  src="./public/svg/N-Dots.svg"
+                  src={dotes}
                   alt=""
                 />
               </div>
@@ -481,7 +478,7 @@ function App() {
                 </div>
                 <img
                   className="invert pl-2 cursor-pointer"
-                  src="./public/svg/N-Dots.svg"
+                  src={dotes}
                   alt=""
                 />
               </div>
@@ -494,7 +491,7 @@ function App() {
                 </div>
                 <img
                   className="invert pl-2 cursor-pointer"
-                  src="./public/svg/N-Dots.svg"
+                  src={dotes}
                   alt=""
                 />
               </div>
