@@ -42,7 +42,7 @@ function App() {
           >
             <img
               className="invert absolute h-[90px]"
-              src="public/svg/Twitter-Logo.svg"
+              src={Xlogo}
               alt=""
             />
           </div>
