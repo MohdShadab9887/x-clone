@@ -1,14 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
+import logo from "../public/svg/Twitter-Logo.svg"
 
 function App() {
+  const [startup, setStartup] = useState(true)
+  useEffect(()=> {
+    const time = setTimeout(()=>{
+      setStartup(false)
+    },1000)
+
+    return () => {
+      clearTimeout(time)
+    }
+  },[])
+
   return (
     <>
       <div className=" vs:px-0 h-screen w-full flex flex-row justify-center  bg-black text-[#e6e9e8] px-5 ">
-        {/* <div className="startupDiv flex justify-center items-center bg-black h-full w-full absolute  z-10">
+       { startup && <div className={` flex justify-center items-center bg-black h-full w-full absolute  z-10`}>
           <img
             className="invert absolute h-[90px]" src="public/svg/Twitter-Logo.svg" alt=""/>
-        </div> */}
+        </div>}
 
         <div className="vs:w-[15%]  invert no-scrollbar lg:w-[18%] lg:min-w-[250px] pt-3 lg:items-start sm:flex sm:flex-col sm:items-end sm:pr-3 sm:pl-0 overflow-scroll ">
           <div
@@ -17,7 +29,7 @@ function App() {
           >
             <img
               className="h-9 pl-2 vs:pl-0  cursor-pointer"
-              src="./public/svg/Twitter-Logo.svg"
+              src={logo}
               alt="logo"
             />
           </div>
