@@ -421,7 +421,7 @@ function App() {
 
         <div className=" no-scrollbar max-h-screen overflow-scroll s:hidden md:inline-flex flex-col w-[20%] min-w-[350px] ">
           <input
-            className=" pl-5 mt-3 ml-5 bg-[#202226] rounded-full h-9 w-[90%]"
+            className=" px-3 pt-2 pb-[8px] mt-3 ml-5 bg-[#202226] rounded-full h-9 w-[90%]"
             type="search"
             name="Search"
             id="searchTab"
