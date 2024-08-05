@@ -1,26 +1,52 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import logo from "../public/svg/Twitter-Logo.svg"
+import Xlogo from "../public/svg/Twitter-Logo.svg";
+import home from "../public/svg/home.svg";
+import explore from "../public/svg/search.svg";
+import notification from "../public/svg/notification.svg";
+import Messages from "../public/svg/message.svg";
+import grok from "../public/svg/grok.svg";
+import Communities from "../public/svg/communities.svg";
+import Profile from "../public/svg/profile.svg";
+import more from "../public/svg/more.svg";
+import videoRG from "../public/video/rahulgandhi.MP4";
+import videoEM from "../public/video/elonMuskVideo.mp4";
+import DP from "../public/svg/DP.jpg";
+import image from "../public/svg/image.png";
+import rgDP from "../public/svg/rahulGandhiDP.jpg";
+import emDP from "../public/svg/elonMuskDP.jpg";
+import verifiedTick from "../public/svg/VerrfiedTick.png";
+import crown from "../public/svg/tate'sCrown.jpg";
+import andrewDP from "../public/svg/ADREW,s DP.jpg";
+import harryDP from "../public/svg/CodeWithHarryDP.png";
+import hcDP from "../public/svg/ChaiOrCodeDP.jpg";
 
 function App() {
-  const [startup, setStartup] = useState(true)
-  useEffect(()=> {
-    const time = setTimeout(()=>{
-      setStartup(false)
-    },1000)
+  const [startup, setStartup] = useState(true);
+  useEffect(() => {
+    const time = setTimeout(() => {
+      setStartup(false);
+    }, 1000);
 
     return () => {
-      clearTimeout(time)
-    }
-  },[])
+      clearTimeout(time);
+    };
+  }, []);
 
   return (
     <>
       <div className=" vs:px-0 h-screen w-full flex flex-row justify-center  bg-black text-[#e6e9e8] px-5 ">
-       { startup && <div className={` flex justify-center items-center bg-black h-full w-full absolute  z-10`}>
-          <img
-            className="invert absolute h-[90px]" src="public/svg/Twitter-Logo.svg" alt=""/>
-        </div>}
+        {startup && (
+          <div
+            className={` flex justify-center items-center bg-black h-full w-full absolute  z-10`}
+          >
+            <img
+              className="invert absolute h-[90px]"
+              src="public/svg/Twitter-Logo.svg"
+              alt=""
+            />
+          </div>
+        )}
 
         <div className="vs:w-[15%]  invert no-scrollbar lg:w-[18%] lg:min-w-[250px] pt-3 lg:items-start sm:flex sm:flex-col sm:items-end sm:pr-3 sm:pl-0 overflow-scroll ">
           <div
@@ -29,7 +55,7 @@ function App() {
           >
             <img
               className="h-9 pl-2 vs:pl-0  cursor-pointer"
-              src={logo}
+              src={Xlogo}
               alt="logo"
             />
           </div>
@@ -40,7 +66,7 @@ function App() {
           rounded-full w-fit pl-2 pr-4 py-2   hover:bg-[#dfdfdd] 
            text-black text-xl gap-[18px] font-semibold "
           >
-            <img className="h-6 " src="./public/svg/home.svg" alt="" />
+            <img className="h-6 " src={home} alt="" />
             <span className="flex smm:hidden ">Home</span>
           </div>
 
@@ -50,7 +76,7 @@ function App() {
           rounded-full w-fit pl-2 pr-4 py-2   hover:bg-[#dfdfdd] 
            text-black text-xl gap-[18px] font-semibold "
           >
-            <img className="h-6 " src="./public/svg/search.svg" alt="" />
+            <img className="h-6 " src={explore} alt="" />
             <span className="lg:flex smm:hidden">Explore</span>
           </div>
 
@@ -60,7 +86,7 @@ function App() {
           rounded-full w-fit pl-2 pr-4 py-2   hover:bg-[#dfdfdd] 
            text-black text-xl gap-[18px] font-semibold "
           >
-            <img className="h-6 " src="./public/svg/Notification.svg" alt="" />
+            <img className="h-6 " src={notification} alt="" />
             <span className="lg:flex smm:hidden">Notification</span>
           </div>
 
@@ -70,7 +96,7 @@ function App() {
           rounded-full w-fit pl-2 pr-4 py-2   hover:bg-[#dfdfdd] 
            text-black text-xl gap-[18px] font-semibold "
           >
-            <img className="h-6 " src="./public/svg/Message.svg" alt="" />
+            <img className="h-6 " src={Messages} alt="" />
             <span className="lg:flex smm:hidden">Messages</span>
           </div>
 
@@ -80,7 +106,7 @@ function App() {
           rounded-full w-fit pl-2 pr-4 py-2   hover:bg-[#dfdfdd] 
            text-black text-xl gap-[18px] font-semibold "
           >
-            <img className="h-6 " src="./public/svg/Grok.svg" alt="" />
+            <img className="h-6 " src={grok} alt="" />
             <span className="lg:flex smm:hidden">Grok</span>
           </div>
 
@@ -90,7 +116,7 @@ function App() {
           rounded-full w-fit pl-2 pr-4 py-2   hover:bg-[#dfdfdd] 
            text-black text-xl gap-[18px] font-semibold "
           >
-            <img className="h-6 " src="./public/svg/Communities.svg" alt="" />
+            <img className="h-6 " src={Communities} alt="" />
             <span className="lg:flex smm:hidden">Communities</span>
           </div>
 
@@ -100,7 +126,7 @@ function App() {
           rounded-full w-fit pl-2 pr-4 py-2   hover:bg-[#dfdfdd] 
            text-black text-xl gap-[18px] font-semibold "
           >
-            <img className="h-6 " src="./public/svg/Twitter-Logo.svg" alt="" />
+            <img className="h-6 " src={Xlogo} alt="" />
             <span className="lg:flex smm:hidden">Premium</span>
           </div>
 
@@ -110,7 +136,7 @@ function App() {
           rounded-full w-fit pl-2 pr-4 py-2   hover:bg-[#dfdfdd] 
            text-black text-xl gap-[18px] font-semibold "
           >
-            <img className="h-6 " src="./public/svg/Profile.svg" alt="" />
+            <img className="h-6 " src={Profile} alt="" />
             <span className="lg:flex smm:hidden">Profile</span>
           </div>
 
@@ -120,21 +146,20 @@ function App() {
           rounded-full w-fit pl-2 pr-4 py-2   hover:bg-[#dfdfdd] 
            text-black text-xl gap-[18px] font-semibold "
           >
-            <img className="h-6 " src="./public/svg/More.svg" alt="" />
+            <img className="h-6 " src={more} alt="" />
             <span className="lg:flex smm:hidden">More</span>
           </div>
-<div className="flex vs:justify-center ">
+          <div className="flex vs:justify-center ">
+            <button className="vs:h-8 vs:w-fit vs:text-xs vs:px-1  bg-orange-600 lg:px-[100px] h-[50px] rounded-full text-black font-extrabold mt-[16px] sm:px-2 sm:mx-1">
+              Post
+            </button>
+          </div>
 
-          <button className="vs:h-8 vs:w-fit vs:text-xs vs:px-1  bg-orange-600 lg:px-[100px] h-[50px] rounded-full text-black font-extrabold mt-[16px] sm:px-2 sm:mx-1">
-            Post
-          </button>
-</div>
-
-          <div className="lg:gap-2 flex vs:justify-center sm:gap-0 lg:mr-2 sm:mr-0 lg:mt-8 sm:mt-5 rounded-full lg:p-1 ms:p-0 lg:pl-2 sm:pl-0 lg:flex lg:justify-between lg:items-center cursor-pointer h-[65px] hover:bg-[#dfdfdd] ">
+          <div className=" lg:w-[240px] lg:gap-2 flex vs:justify-center sm:gap-0 lg:mr-2 sm:mr-0 lg:mt-8 rounded-full lg:p-1 ms:p-0 lg:pl-2 sm:pl-0 lg:flex lg:justify-between lg:items-center cursor-pointer h-[65px] hover:bg-[#dfdfdd] ">
             <div className="flex my-4">
               <img
                 className="h-12 mr-2 invert flex rounded-full "
-                src="./public/svg/DP.jpg"
+                src={DP}
                 alt="DP"
               />
 
@@ -160,16 +185,15 @@ function App() {
         {/* ------------ section-2------------------------- */}
 
         <div className="no-scrollbar w-[45%] h-screen+[50px] overflow-scroll vs:w-[85%] vs-px-2 mb-1 border-x border-gray-700 s:w-[80%]">
-          <div className=" sticky flex h-10 pr-4 bg-black opacity-80 backdrop-blur-3xl  top-0 justify-between border-b border-gray-700 ">
+          <div className=" bg-black opacity-80 sticky flex h-10 pr-4 top-0 justify-between border-b border-gray-700 ">
             <div className="flex items-center justify-between w-[70%] xxs:pl-[10%] pl-[20%] text-[#fafafa] ">
-              <p>For you
-          <div className="bg-blue-500 rounded h-[6px] w-[53px] font-bold absolute bottom-[0px]">
-            
-          </div>
-
-
+              <p>
+                For you
+                <div className="bg-blue-500 rounded h-[6px] w-[53px] font-bold absolute bottom-[0px]">
+                  {/* blue underline */}
+                </div>
               </p>
-              <p className="text-[#9e9c9c]" >Following</p>
+              <p className="text-[#9e9c9c]">Following</p>
             </div>
             <div className="invert items-center flex">
               <img className="h-5 " src="public/svg/setting.svg" alt="" />
@@ -181,11 +205,7 @@ function App() {
           <div className="pl-4 flex xxs:flex-col p-3 min-h-[100px] justify-between pr-5 border-b border-gray-700">
             <div className="flex">
               <div className="w-fit h-full">
-                <img
-                  className="h-10 min-w-10 rounded-full "
-                  src="public/svg/DP.jpg"
-                  alt=""
-                />
+                <img className="h-10 min-w-10 rounded-full " src={DP} alt="" />
               </div>
               <div>
                 <input
@@ -194,6 +214,7 @@ function App() {
                   onChange={Text}
                   placeholder="What is happening?!"
                 />
+                <div className=" border-b-[1px] border-gray-700 max-w-[140px] ml-3 mb-3"></div>
                 <div className=" flex gap-2 mt-1">
                   <span class="material-symbols-outlined text-blue-400">
                     image
@@ -238,15 +259,10 @@ function App() {
 
           {/* ---------------- Posts --------------- */}
 
-
           <div className=" w-[100%] p-2 border-b border-gray-800">
             <div className="flex">
               <div className="w-[40px]">
-                <img
-                  className="max-h-10 rounded-full"
-                  src="public/svg/rahulGandhiDP.jpg"
-                  alt=""
-                />
+                <img className="max-h-10 rounded-full" src={rgDP} alt="" />
               </div>
               <div className="w-[85%]">
                 <div className="flex items-center gap-1 px-2">
@@ -254,11 +270,7 @@ function App() {
                     <div className="flex items-center gap-1">
                       {/* name */}
                       <h4 className="font-bold">Rahul Gandhi</h4>
-                      <img
-                        className="h-[14px]"
-                        src="public/svg/VerrfiedTick.png"
-                        alt=""
-                      />
+                      <img className="h-[14px]" src={verifiedTick} alt="" />
                     </div>
 
                     {/* username */}
@@ -268,9 +280,7 @@ function App() {
                   </div>
                   <div className="xxs:flex xxs:h-10  h-6">
                     {/* post-Time */}
-                    <p className=" text-sm font-semibold text-[#666666]">
-                      -1h
-                    </p>
+                    <p className=" text-sm font-semibold text-[#666666]">-1h</p>
                   </div>
                 </div>
                 <p className="text-xs text-left px-2 xxs:mt-2">
@@ -289,27 +299,35 @@ function App() {
               </div>
             </div>
             <div className="flex m-auto mt-6 rounded-2xl overflow-hidden w-[80%]">
-              <video autoPlay src="public/video/RAHULG~1.MP4"></video>
+              <video autoPlay src={videoRG}></video>
             </div>
 
             <div className="flex justify-between items-center w-[80%] m-auto mt-3 h-8 ">
               <div className="flex  text-gray-500 gap-1 hover:text-blue-400 ">
-                <span class="material-symbols-outlined xxs:text-sm ">chat_bubble</span>
+                <span class="material-symbols-outlined xxs:text-sm ">
+                  chat_bubble
+                </span>
                 <span className="xxs:text-xs ">20.7k</span>
               </div>
 
               <div className="flex text-gray-500 hover:text-green-400">
-                <span class="material-symbols-outlined xxs:text-sm">repeat</span>
+                <span class="material-symbols-outlined xxs:text-sm">
+                  repeat
+                </span>
                 <span className="xxs:text-xs ">63.5k</span>
               </div>
 
               <div className="flex text-gray-500 hover:text-pink-400">
-                <span class="material-symbols-outlined xxs:text-sm">favorite</span>
+                <span class="material-symbols-outlined xxs:text-sm">
+                  favorite
+                </span>
                 <span className="xxs:text-xs ">459k</span>
               </div>
 
               <div className="flex text-gray-500 hover:bg-gray-90 hover:text-blue-600">
-                <span class="material-symbols-outlined xxs:text-sm">bar_chart</span>
+                <span class="material-symbols-outlined xxs:text-sm">
+                  bar_chart
+                </span>
                 <span className="xxs:text-xs ">4M</span>
               </div>
 
@@ -327,11 +345,7 @@ function App() {
           <div className=" w-[100%] p-2 border-b border-gray-800">
             <div className="flex">
               <div className="w-[40px]">
-                <img
-                  className="max-h-10 rounded-full"
-                  src="public/svg/elonMuskDP.jpg"
-                  alt=""
-                />
+                <img className="max-h-10 rounded-full" src={emDP} alt="" />
               </div>
               <div className="w-[85%]">
                 <div className="flex items-center gap-1 px-2">
@@ -339,11 +353,7 @@ function App() {
                     <div className="flex items-center gap-1">
                       {/* name */}
                       <h4 className="font-bold">Elon Musk</h4>
-                      <img
-                        className="h-[14px]"
-                        src="public/svg/VerrfiedTick.png"
-                        alt=""
-                      />
+                      <img className="h-[14px]" src={verifiedTick} alt="" />
                     </div>
 
                     {/* username */}
@@ -353,13 +363,11 @@ function App() {
                   </div>
                   <div className="xxs:flex xxs:h-10  h-6">
                     {/* post-Time */}
-                    <p className=" text-sm font-semibold text-[#666666]">
-                      -2h
-                    </p>
+                    <p className=" text-sm font-semibold text-[#666666]">-2h</p>
                   </div>
                 </div>
                 <p className="text-xs text-left px-2 xxs:mt-2">
-                High time for an AI fashion show
+                  High time for an AI fashion show
                 </p>
               </div>
 
@@ -368,27 +376,35 @@ function App() {
               </div>
             </div>
             <div className="flex m-auto mt-6 rounded-2xl overflow-hidden w-[80%]">
-              <video autoPlay src="public/video/elonMuskVideo.MP4"></video>
+              <video autoPlay src={videoEM}></video>
             </div>
 
             <div className="flex justify-between items-center w-[80%] m-auto mt-3 h-8 ">
               <div className="flex  text-gray-500 gap-1 hover:text-blue-400 ">
-                <span class="material-symbols-outlined xxs:text-sm ">chat_bubble</span>
+                <span class="material-symbols-outlined xxs:text-sm ">
+                  chat_bubble
+                </span>
                 <span className="xxs:text-xs ">70.2k</span>
               </div>
 
               <div className="flex text-gray-500 hover:text-green-400">
-                <span class="material-symbols-outlined xxs:text-sm">repeat</span>
+                <span class="material-symbols-outlined xxs:text-sm">
+                  repeat
+                </span>
                 <span className="xxs:text-xs ">163.2k</span>
               </div>
 
               <div className="flex text-gray-500 hover:text-pink-400">
-                <span class="material-symbols-outlined xxs:text-sm">favorite</span>
+                <span class="material-symbols-outlined xxs:text-sm">
+                  favorite
+                </span>
                 <span className="xxs:text-xs ">991k</span>
               </div>
 
               <div className="flex text-gray-500 hover:bg-gray-90 hover:text-blue-600">
-                <span class="material-symbols-outlined xxs:text-sm">bar_chart</span>
+                <span class="material-symbols-outlined xxs:text-sm">
+                  bar_chart
+                </span>
                 <span className="xxs:text-xs ">10M</span>
               </div>
 
@@ -402,9 +418,6 @@ function App() {
               </div>
             </div>
           </div>
-          
-
-          
         </div>
 
         {/* ------------ section-3 ------------------------- */}
@@ -443,11 +456,7 @@ function App() {
                 </div>
 
                 <div className="flex justify-end mb-2">
-                  <img
-                    className="h-[65px] rounded-lg"
-                    src="./public/svg/image.png"
-                    alt="img"
-                  />
+                  <img className="h-[65px] rounded-lg" src={image} alt="img" />
                 </div>
               </div>
 
@@ -507,7 +516,7 @@ function App() {
                 <div className=" mr-2">
                   <img
                     className="h-[39px] rounded-full cursor-pointer"
-                    src="public/svg/ADREW,s DP.jpg"
+                    src={andrewDP}
                     alt=""
                   />
                 </div>
@@ -520,19 +529,11 @@ function App() {
                 </div>
 
                 <div className="pt-[7px] ">
-                  <img
-                    className="h-[14px] px-1"
-                    src="public/svg/VerrfiedTick.png"
-                    alt=""
-                  />
+                  <img className="h-[14px] px-1" src={verifiedTick} alt="" />
                 </div>
 
                 <div className="pt-[7px] ">
-                  <img
-                    className="h-[14px] px-1 "
-                    src="public/svg/Tate'sCrown.jpg"
-                    alt=""
-                  />
+                  <img className="h-[14px] px-1 " src={crown} alt="" />
                 </div>
               </div>
               <div className="flex items-center ">
@@ -549,7 +550,7 @@ function App() {
                 <div className=" mr-2">
                   <img
                     className="h-[39px] rounded-full cursor-pointer"
-                    src="public/svg/CodeWithHarryDP.png"
+                    src={harryDP}
                     alt=""
                   />
                 </div>
@@ -562,11 +563,7 @@ function App() {
                 </div>
 
                 <div className="pt-[7px] ">
-                  <img
-                    className="h-[14px] px-1"
-                    src="public/svg/VerrfiedTick.png"
-                    alt=""
-                  />
+                  <img className="h-[14px] px-1" src={verifiedTick} alt="" />
                 </div>
               </div>
               <div className="flex items-center ">
@@ -583,7 +580,7 @@ function App() {
                 <div className=" mr-2">
                   <img
                     className="cursor-pointer h-[39px] rounded-full"
-                    src="public/svg/ChaiOrCodeDP.jpg"
+                    src={hcDP}
                     alt=""
                   />
                 </div>
@@ -596,11 +593,7 @@ function App() {
                 </div>
 
                 <div className="pt-[7px] ">
-                  <img
-                    className="h-[14px] px-1"
-                    src="public/svg/VerrfiedTick.png"
-                    alt=""
-                  />
+                  <img className="h-[14px] px-1" src={verifiedTick} alt="" />
                 </div>
               </div>
               <div className="flex items-center ">
